@@ -1,0 +1,30 @@
+.hero {
+  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+  padding: 4rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+
+  h1 {
+    font-size: 3rem;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.content {
+  padding: 4rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}

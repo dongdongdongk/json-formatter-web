@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "logo": "JSON Formatter",
+    "home": "Home",
+    "about": "About",
+    "guide": "Guide",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "JSON Formatter & TypeScript Interface Generator",
+    "subtitle": "Format compressed JSON beautifully and automatically generate TypeScript interfaces.\nEssential tool for developers.",
+    "features": {
+      "validation": {
+        "title": "🎯 Real-time Validation",
+        "description": "Instantly verify JSON syntax errors and show exact locations."
+      },
+      "generation": {
+        "title": "⚡ Auto Generation",
+        "description": "Analyze JSON structure to automatically generate TypeScript interfaces."
+      },
+      "copy": {
+        "title": "📋 One-click Copy",
+        "description": "Copy formatted JSON and generated interfaces with a single click."
+      }
+    }
+  },
+  "formatter": {
+    "title": "JSON Formatter & Interface Generator",
+    "input": {
+      "title": "JSON Input",
+      "placeholder": "Enter your JSON data..."
+    },
+    "output": {
+      "json": "Formatted JSON",
+      "interface": "TypeScript Interface",
+      "jsonPlaceholder": "Formatted JSON will appear here.",
+      "interfacePlaceholder": "TypeScript interface will be generated here.",
+      "copy": "Copy",
+      "interfaceName": "Interface Name"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "JSON Formatter & TypeScript Interface Generator About | Developer Tools",
+      "description": "Learn about the JSON Formatter and TypeScript Interface Generator's development background and key features."
+    },
+    "hero": {
+      "title": "JSON Formatter & TypeScript Interface Generator",
+      "subtitle": "Essential tool to boost developer productivity"
+    },
+    "intro": {
+      "title": "🎯 Service Introduction",
+      "description": "JSON Formatter is a web application that helps developers handle JSON data more easily. It formats compressed JSON into readable form and automatically generates TypeScript interfaces to maximize development efficiency."
+    },
+    "features": {
+      "title": "🚀 Key Features",
+      "formatting": {
+        "title": "JSON Formatting and Validation",
+        "items": [
+          "Clean up compressed JSON beautifully",
+          "Real-time JSON validation",
+          "Precise syntax error location display"
+        ]
+      },
+      "typescript": {
+        "title": "Automatic TypeScript Interface Generation",
+        "items": [
+          "Generate type definitions by analyzing JSON structure",
+          "Handle nested objects and array types accurately",
+          "Automatic optional field detection",
+          "Interface name customization"
+        ]
+      },
+      "convenience": {
+        "title": "Convenience Features",
+        "items": [
+          "One-click copy functionality",
+          "Real-time processing",
+          "Responsive design",
+          "Dark/Light mode support"
+        ]
+      }
+    },
+    "background": {
+      "title": "💡 Development Background",
+      "paragraph1": "Working with JSON data is extremely frequent in backend API development and frontend development. Especially in TypeScript projects, type definitions for API response data are essential.",
+      "paragraph2": "However, manually analyzing JSON structure and writing TypeScript interfaces every time is time-consuming and error-prone. This tool was developed to automate these repetitive tasks and improve developer productivity."
+    },
+    "differentiators": {
+      "title": "🎨 Differentiators",
+      "userFriendly": {
+        "title": "User-Friendly Interface",
+        "description": "Intuitive and clean design that anyone can use easily."
+      },
+      "realtime": {
+        "title": "Real-time Processing",
+        "description": "Results are displayed simultaneously with input for quick feedback."
+      },
+      "free": {
+        "title": "Completely Free",
+        "description": "All features are available for free without registration."
+      }
+    },
+    "techStack": {
+      "title": "🔧 Tech Stack"
+    }
+  },
+  "guide": {
+    "meta": {
+      "title": "JSON Formatter User Guide | Usage Tips and Methods",
+      "description": "Check detailed usage methods and practical tips for JSON Formatter and TypeScript Interface Generator."
+    },
+    "hero": {
+      "title": "User Guide",
+      "subtitle": "Learn how to effectively use the JSON Formatter"
+    },
+    "quickStart": {
+      "title": "🚀 Quick Start",
+      "steps": [
+        {
+          "title": "Input JSON Data",
+          "description": "Paste or directly input the JSON data you want to format in the left input field."
+        },
+        {
+          "title": "Check Real-time Results",
+          "description": "Formatted JSON and TypeScript interface are automatically generated on the right side as you input."
+        },
+        {
+          "title": "Copy Results",
+          "description": "Click the 'Copy' button in each area to copy the formatted JSON or TypeScript interface to your clipboard."
+        }
+      ]
+    },
+    "features": {
+      "title": "💡 Detailed Feature Description",
+      "jsonFormatting": {
+        "title": "1. JSON Formatting and Validation",
+        "formatting": {
+          "title": "Formatting",
+          "description": "Organizes compressed JSON into readable form.",
+          "inputExample": "Input Example",
+          "outputExample": "Output Example"
+        },
+        "validation": {
+          "title": "Real-time Validation",
+          "description": "Check JSON syntax errors in real-time and display error locations.",
+          "items": [
+            "Detect missing quotes",
+            "Check incorrect comma positions",
+            "Verify bracket mismatches"
+          ]
+        }
+      },
+      "typescript": {
+        "title": "2. TypeScript Interface Generation",
+        "autoInference": {
+          "title": "Automatic Type Inference",
+          "description": "Automatically generate appropriate TypeScript types by analyzing JSON structure.",
+          "jsonInput": "JSON Input",
+          "generatedInterface": "Generated Interface"
+        },
+        "customization": {
+          "title": "Interface Name Customization",
+          "description": "You can change the name of the generated interface as desired.",
+          "items": [
+            "Default: \"MyInterface\"",
+            "Real-time name change available",
+            "PascalCase recommended"
+          ]
+        }
+      }
+    }
+  },
+  "faq": {
+    "meta": {
+      "title": "JSON Formatter FAQ | Frequently Asked Questions",
+      "description": "Check frequently asked questions and answers, troubleshooting methods while using JSON Formatter."
+    },
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Check out common questions about using JSON Formatter"
+    },
+    "categories": {
+      "all": "All",
+      "general": "General",
+      "technical": "Technical",
+      "troubleshooting": "Troubleshooting"
+    },
+    "questions": {
+      "1": {
+        "question": "Is JSON Formatter free to use?",
+        "answer": "Yes, it's completely free. You can use all features unlimited without registration."
+      },
+      "2": {
+        "question": "Where is the input JSON data stored?",
+        "answer": "Input data is only processed in the browser and not sent to the server. All data is deleted when you refresh the page."
+      },
+      "3": {
+        "question": "What's the maximum size of JSON file that can be processed?",
+        "answer": "It depends on browser memory limitations, but generally JSON files under 10MB are recommended. Larger files may slow down the browser."
+      },
+      "4": {
+        "question": "Are there cases where TypeScript interfaces are generated incorrectly?",
+        "answer": "Yes, there are some limitations. For arrays, it infers based on the first element's type, so arrays with mixed types may not be accurate. Also, null values may not be handled as optional types."
+      },
+      "5": {
+        "question": "Can I modify the generated TypeScript interface?",
+        "answer": "The current version doesn't support direct modification of auto-generated interfaces. Please copy and modify in your code editor as needed."
+      },
+      "6": {
+        "question": "How do I resolve JSON syntax errors?",
+        "answer": "Common JSON syntax errors include: 1) Use double quotes for strings 2) Remove comma after last element 3) Match brackets properly 4) Remove comments. Check the error location based on the error message."
+      },
+      "7": {
+        "question": "The copy function doesn't work.",
+        "answer": "Browser clipboard permission is required. It only works properly on HTTPS connections and may not be supported in some older browsers. Please manually select and copy."
+      },
+      "8": {
+        "question": "Can I use this on mobile?",
+        "answer": "Yes, you can use it on mobile browsers with responsive design. However, large JSON files may be slower due to mobile performance limitations."
+      },
+      "9": {
+        "question": "Do you support dark mode?",
+        "answer": "Currently supports dark mode based on system settings. Manual toggle feature will be added in the future."
+      },
+      "10": {
+        "question": "Can JSON with special characters or emojis be processed?",
+        "answer": "Yes, UTF-8 encoding is supported, so JSON containing Korean, special characters, and emojis are processed normally."
+      },
+      "11": {
+        "question": "Are TypeScript interfaces generated even for very deeply nested objects?",
+        "answer": "Yes, there's no limit to nesting depth, but very deep nesting may reduce readability. It's recommended to separate into individual interfaces as needed."
+      },
+      "12": {
+        "question": "What about browser compatibility?",
+        "answer": "Available on all modern browsers (Chrome, Firefox, Safari, Edge). Internet Explorer is not supported."
+      }
+    },
+    "contact": {
+      "title": "Have additional questions?",
+      "description": "If you have issues not resolved by the FAQ above, please contact us through GitHub Issues."
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 JSON Formatter. All rights reserved.",
+    "description": "A project making developer tools easier"
+  }
+}
