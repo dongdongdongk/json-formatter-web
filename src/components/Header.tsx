@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import LanguageSelector from './LanguageSelector'
@@ -17,6 +18,13 @@ export default function Header() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo}>
+            <Image 
+              src="/icon.png" 
+              alt="JSON Formatter Icon" 
+              width={32} 
+              height={32}
+              className={styles.logoIcon}
+            />
             {t('logo')}
           </Link>
           

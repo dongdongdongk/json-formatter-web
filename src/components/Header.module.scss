@@ -20,9 +20,21 @@
   color: var(--accent-dark);
   text-decoration: none;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
     color: var(--accent-light);
+  }
+}
+
+.logoIcon {
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+
+  .logo:hover & {
+    transform: scale(1.1);
   }
 }
 
