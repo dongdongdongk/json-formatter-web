@@ -12,7 +12,7 @@ export default function JsonFormatter() {
   const [error, setError] = useState('')
   const [interfaceName, setInterfaceName] = useState('MyInterface')
 
-  const formatJson = useCallback((input: string) => {
+  const formatJson = useCallback((input: string, name: string) => {
     if (!input.trim()) {
       setFormattedJson('')
       setTypescriptInterface('')
@@ -25,16 +25,16 @@ export default function JsonFormatter() {
       const formatted = JSON.stringify(parsed, null, 2)
       setFormattedJson(formatted)
       setError('')
-      
-      // TypeScript 인터페이스 생성
-      const tsInterface = generateTypeScriptInterface(parsed, interfaceName)
+
+      // TypeScript 인터페이스 생성 - 매개변수로 받은 name 사용
+      const tsInterface = generateTypeScriptInterface(parsed, name)
       setTypescriptInterface(tsInterface)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'JSON 파싱 오류가 발생했습니다.')
       setFormattedJson('')
       setTypescriptInterface('')
     }
-  }, [interfaceName])
+  }, [])
 
   const generateTypeScriptInterface = (obj: any, name: string): string => {
     const getType = (value: any): string => {
@@ -59,14 +59,14 @@ export default function JsonFormatter() {
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value
     setJsonInput(value)
-    formatJson(value)
+    formatJson(value, interfaceName)
   }
 
   const handleInterfaceNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const name = e.target.value || 'MyInterface'
+    const name = e.target.value
     setInterfaceName(name)
     if (jsonInput.trim()) {
-      formatJson(jsonInput)
+      formatJson(jsonInput, name) // 최신 name 값을 직접 전달
     }
   }
 
@@ -83,7 +83,7 @@ export default function JsonFormatter() {
     <section className={styles.formatter}>
       <div className="container">
         <h2 className={styles.title}>{t('title')}</h2>
-        
+
         <div className={styles.tools}>
           <div className={styles.inputSection}>
             <h3>{t('input.title')}</h3>
@@ -100,7 +100,7 @@ export default function JsonFormatter() {
             <div className={styles.outputBlock}>
               <div className={styles.outputHeader}>
                 <h3>{t('output.json')}</h3>
-                <button 
+                <button
                   onClick={() => copyToClipboard(formattedJson)}
                   className={styles.copyButton}
                   disabled={!formattedJson}
@@ -123,7 +123,7 @@ export default function JsonFormatter() {
                   className={styles.interfaceNameInput}
                   placeholder={t('output.interfaceName')}
                 />
-                <button 
+                <button
                   onClick={() => copyToClipboard(typescriptInterface)}
                   className={styles.copyButton}
                   disabled={!typescriptInterface}

@@ -61,12 +61,6 @@ const faqData: FaqItem[] = [
     category: 'general'
   },
   {
-    id: '9',
-    question: '다크 모드를 지원하나요?',
-    answer: '현재 시스템 설정에 따른 다크 모드를 지원합니다. 향후 수동 전환 기능을 추가할 예정입니다.',
-    category: 'general'
-  },
-  {
     id: '10',
     question: '특수 문자나 이모지가 포함된 JSON도 처리할 수 있나요?',
     answer: '네, UTF-8 인코딩을 지원하므로 한글, 특수 문자, 이모지가 포함된 JSON도 정상적으로 처리됩니다.',
@@ -147,10 +141,10 @@ export default function FaqSection() {
         ))}
       </div>
 
-      <div className={styles.contact}>
+      {/* <div className={styles.contact}>
         <h3>{t('contact.title')}</h3>
         <p>{t('contact.description')}</p>
-      </div>
+      </div> */}
     </div>
   )
 }

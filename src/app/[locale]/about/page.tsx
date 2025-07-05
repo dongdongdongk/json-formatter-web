@@ -94,16 +94,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-
-            <div className={styles.section}>
-              <h2>{t('techStack.title')}</h2>
-              <div className={styles.techStack}>
-                <span>Next.js</span>
-                <span>TypeScript</span>
-                <span>SCSS</span>
-                <span>Vercel</span>
-              </div>
-            </div>
           </div>
         </section>
       </main>

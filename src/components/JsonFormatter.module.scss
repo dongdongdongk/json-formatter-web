@@ -149,10 +149,10 @@
     align-items: center;
     gap: 0.5rem;
 
-    &:first-child::before {
-      content: '✨';
-      font-size: 1.1rem;
-    }
+    // &:first-child::before {
+    //   content: '✨';
+    //   font-size: 1.1rem;
+    // }
 
     &:last-child::before {
       content: '⚙️';
