@@ -165,9 +165,10 @@
 .useCase {
   margin-bottom: 3rem;
   padding: 2rem;
-  background-color: var(--accent-light);
+  background-color: var(--secondary-bg);
   border-radius: 1rem;
-  border: 1px solid var(--accent-dark);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   h3 {
     color: var(--accent-dark);
@@ -176,8 +177,9 @@
   }
 
   p {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
+    line-height: 1.6;
   }
 
   h4 {
