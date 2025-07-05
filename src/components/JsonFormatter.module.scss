@@ -135,11 +135,10 @@
 
 .outputHeader {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
   gap: 1rem;
-  flex-wrap: wrap;
 
   h3 {
     color: var(--accent-dark);
@@ -148,6 +147,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-shrink: 0;
 
     // &:first-child::before {
     //   content: '✨';
@@ -157,6 +157,59 @@
     &:last-child::before {
       content: '⚙️';
       font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    
+    h3 {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// TypeScript 인터페이스 헤더 전용 스타일
+.interfaceHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+  h3 {
+    color: var(--accent-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+
+    &::before {
+      content: '⚙️';
+      font-size: 1.1rem;
+    }
+  }
+
+  .interfaceNameInput {
+    flex: 1;
+    max-width: 200px;
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    
+    h3 {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .interfaceNameInput {
+      max-width: none;
+      flex: 1;
+      margin: 0.5rem 0;
     }
   }
 }

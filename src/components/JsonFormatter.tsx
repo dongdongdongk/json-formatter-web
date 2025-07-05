@@ -114,7 +114,7 @@ export default function JsonFormatter() {
             </div>
 
             <div className={styles.outputBlock}>
-              <div className={styles.outputHeader}>
+              <div className={styles.interfaceHeader}>
                 <h3>{t('output.interface')}</h3>
                 <input
                   type="text"
