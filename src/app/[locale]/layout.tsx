@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { Analytics } from '@vercel/analytics/next'
 import { locales } from '@/i18n/config'
 import '@/styles/globals.scss'
 
@@ -14,20 +15,12 @@ export async function generateMetadata({
   const titles = {
     en: 'JSON Formatter & TypeScript Interface Generator',
     ko: 'JSON 포맷터 & TypeScript 인터페이스 생성기',
-    zh: 'JSON 格式化器和 TypeScript 接口生成器',
-    es: 'Formateador JSON y Generador de Interfaces TypeScript',
-    hi: 'JSON फॉर्मेटर और TypeScript इंटरफेस जेनरेटर',
-    ar: 'منسق JSON ومولد واجهات TypeScript',
     ja: 'JSON フォーマッター & TypeScript インターフェース生成器'
   }
   
   const descriptions = {
     en: 'Format JSON and automatically generate TypeScript interfaces with our free online tool.',
     ko: 'JSON을 깔끔하게 포맷하고 TypeScript 인터페이스를 자동으로 생성하는 도구입니다.',
-    zh: '使用我们的免费在线工具格式化 JSON 并自动生成 TypeScript 接口。',
-    es: 'Formatea JSON y genera automáticamente interfaces TypeScript con nuestra herramienta gratuita en línea.',
-    hi: 'हमारे मुफ्त ऑनलाइन टूल से JSON को फॉर्मेट करें और TypeScript इंटरफेस स्वचालित रूप से उत्पन्न करें।',
-    ar: 'تنسيق JSON وإنشاء واجهات TypeScript تلقائيًا باستخدام أداتنا المجانية عبر الإنترنت.',
     ja: '無料のオンラインツールでJSONをフォーマットし、TypeScriptインターフェースを自動生成します。'
   }
 
@@ -44,7 +37,7 @@ export async function generateMetadata({
       description,
       type: 'website',
       siteName: 'JSON Formatter',
-      locale: locale === 'ko' ? 'ko_KR' : locale === 'zh' ? 'zh_CN' : locale === 'ja' ? 'ja_JP' : 'en_US',
+      locale: locale === 'ko' ? 'ko_KR' : locale === 'ja' ? 'ja_JP' : 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
@@ -65,7 +58,7 @@ export async function generateMetadata({
         "@type": "WebApplication",
         "name": title,
         "description": description,
-        "url": "https://json-formatter-web.vercel.app",
+        "url": "https://jsonformatter.roono.net",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "All",
         "offers": {
@@ -98,6 +91,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div id="root">{children}</div>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )
