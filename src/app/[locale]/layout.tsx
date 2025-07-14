@@ -39,7 +39,7 @@ export async function generateMetadata({
     keywords: ['JSON formatter', 'JSON 포맷터', 'TypeScript interface generator', 'JSON to TypeScript', 'JSON validator', 'JSON beautifier'],
     authors: [{ name: 'JSON Formatter Web' }],
     alternates: {
-      canonical: `${baseUrl}/en`,
+      canonical: `${baseUrl}/${locale}`,
       languages: alternates
     },
     openGraph: {
