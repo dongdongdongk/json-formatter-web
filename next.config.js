@@ -7,6 +7,15 @@ const nextConfig = {
   sassOptions: {
     includePaths: ['./src/styles'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/en',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = withNextIntl(nextConfig)

@@ -26,18 +26,29 @@ export async function generateMetadata({
 
   const title = titles[locale as keyof typeof titles] || titles.en
   const description = descriptions[locale as keyof typeof descriptions] || descriptions.en
+  const baseUrl = 'https://jsonformatter.roono.net'
+
+  const alternates: Record<string, string> = {}
+  locales.forEach(loc => {
+    alternates[loc] = `${baseUrl}/${loc}`
+  })
 
   return {
     title,
     description,
     keywords: ['JSON formatter', 'JSON 포맷터', 'TypeScript interface generator', 'JSON to TypeScript', 'JSON validator', 'JSON beautifier'],
     authors: [{ name: 'JSON Formatter Web' }],
+    alternates: {
+      canonical: `${baseUrl}/en`,
+      languages: alternates
+    },
     openGraph: {
       title,
       description,
       type: 'website',
       siteName: 'JSON Formatter',
       locale: locale === 'ko' ? 'ko_KR' : locale === 'ja' ? 'ja_JP' : 'en_US',
+      url: `${baseUrl}/${locale}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -58,7 +69,7 @@ export async function generateMetadata({
         "@type": "WebApplication",
         "name": title,
         "description": description,
-        "url": "https://jsonformatter.roono.net",
+        "url": `${baseUrl}/${locale}`,
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "All",
         "offers": {
