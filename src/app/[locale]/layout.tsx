@@ -40,7 +40,10 @@ export async function generateMetadata({
     authors: [{ name: 'JSON Formatter Web' }],
     alternates: {
       canonical: `${baseUrl}/${locale}`,
-      languages: alternates
+      languages: {
+        ...alternates,
+        'x-default': `${baseUrl}/en`
+      }
     },
     openGraph: {
       title,
