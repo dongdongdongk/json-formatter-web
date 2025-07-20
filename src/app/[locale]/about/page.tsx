@@ -12,10 +12,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'about' })
+  const baseUrl = 'https://jsonformatter.roono.net'
   
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: {
+      canonical: `${baseUrl}/${locale}/about`,
+      languages: {
+        en: `${baseUrl}/en/about`,
+        ko: `${baseUrl}/ko/about`,
+        ja: `${baseUrl}/ja/about`,
+        'x-default': `${baseUrl}/en/about`
+      }
+    },
+    robots: {
+      index: true,
+      follow: true,
+    }
   }
 }
 

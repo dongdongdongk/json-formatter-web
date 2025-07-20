@@ -42,7 +42,7 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}`,
       languages: {
         ...alternates,
-        'x-default': `${baseUrl}/en`
+'x-default': `${baseUrl}/en`
       }
     },
     openGraph: {
