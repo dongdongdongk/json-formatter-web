@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         }))
       
       routes.push({
-        url: `${baseUrl}/${locale}${page}`,
+        url: locale === 'en' && page === '' ? baseUrl : `${baseUrl}/${locale}${page}`,
         lastModified: pageLastModified[page as keyof typeof pageLastModified] || new Date(),
         changeFrequency: page === '' ? 'weekly' : 'monthly',
         priority: page === '' ? 1 : page === '/about' || page === '/guide' ? 0.8 : 0.6,
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ...Object.fromEntries(
               locales.map(l => [l, `${baseUrl}/${l}${page}`])
             ),
-            'x-default': `${baseUrl}/en${page}`
+            'x-default': page === '' ? baseUrl : `${baseUrl}/en${page}`
           }
         }
       })

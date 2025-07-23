@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'JSON Formatter & TypeScript Interface Generator',
@@ -10,11 +11,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  )
+  redirect('/en')
 }

@@ -39,10 +39,10 @@ export async function generateMetadata({
     keywords: ['JSON formatter', 'JSON 포맷터', 'TypeScript interface generator', 'JSON to TypeScript', 'JSON validator', 'JSON beautifier'],
     authors: [{ name: 'JSON Formatter Web' }],
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
+      canonical: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
       languages: {
         ...alternates,
-'x-default': `${baseUrl}/en`
+        'x-default': baseUrl
       }
     },
     openGraph: {
@@ -51,7 +51,7 @@ export async function generateMetadata({
       type: 'website',
       siteName: 'JSON Formatter',
       locale: locale === 'ko' ? 'ko_KR' : locale === 'ja' ? 'ja_JP' : 'en_US',
-      url: `${baseUrl}/${locale}`,
+      url: locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -72,7 +72,7 @@ export async function generateMetadata({
         "@type": "WebApplication",
         "name": title,
         "description": description,
-        "url": `${baseUrl}/${locale}`,
+        "url": locale === 'en' ? baseUrl : `${baseUrl}/${locale}`,
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "All",
         "offers": {
